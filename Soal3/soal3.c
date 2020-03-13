@@ -48,7 +48,7 @@ int main(){
 	struct dirent *ad;
 	struct stat cek;
 	FILE *fptr;
-	char ch[100];	
+	char str[100];	
 	dir = opendir(".");
 	
 	//if(dir == NULL){
@@ -63,13 +63,13 @@ int main(){
 		if(child4 == 0){
 			if(stat(ad->d_name,&cek) == 0){
   			if(cek.st_mode & S_IFDIR){
-					sprintf(ch, "/home/syamil/modul2/jpg/%s", ad->d_name);
-					char *argv[] = {"mv", ch, "/home/syamil/modul2/indomie", NULL};
+					sprintf(str, "/home/syamil/modul2/jpg/%s", ad->d_name);
+					char *argv[] = {"mv", str, "/home/syamil/modul2/indomie", NULL};
 					execv("/bin/mv", argv);
 				}else{
 					while((wait(&status)) > 0);
-					sprintf(ch, "/home/syamil/modul2/jpg/%s", ad->d_name);
-					char *argv[] = {"mv", ch, "/home/syamil/modul2/sedaap", NULL};
+					sprintf(str, "/home/syamil/modul2/jpg/%s", ad->d_name);
+					char *argv[] = {"mv", str, "/home/syamil/modul2/sedaap", NULL};
 					execv("/bin/mv", argv);							
 					}
 				}
