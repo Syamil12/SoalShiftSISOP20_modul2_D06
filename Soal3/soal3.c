@@ -46,7 +46,7 @@ int main(){
 	DIR *dir;
 	chdir("/home/syamil/modul2/jpg/");
 	struct dirent *ad;
-	struct stat check;
+	struct stat cek;
 	FILE *fptr;
 	char ch[100];	
 	dir = opendir(".");
@@ -61,8 +61,8 @@ int main(){
   	  continue;
 		child4 = fork();
 		if(child4 == 0){
-			if(stat(ad->d_name,&check) == 0){
-  			if(check.st_mode & S_IFDIR){
+			if(stat(ad->d_name,&cek) == 0){
+  			if(cek.st_mode & S_IFDIR){
 					sprintf(ch, "/home/syamil/modul2/jpg/%s", ad->d_name);
 					char *argv[] = {"mv", ch, "/home/syamil/modul2/indomie", NULL};
 					execv("/bin/mv", argv);
