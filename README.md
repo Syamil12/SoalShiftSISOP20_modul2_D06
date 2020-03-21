@@ -198,3 +198,11 @@ while((wait(&status)) > 0);
 + Menjalankan `argv` menggunakan `execv` dengan perintah `/bin/mv` yang berarti memindahkan direktori yang ditunjuk pointer `ad` ke direktori indomie
 + Lalu masuk ke else jika yang ditunjuk pointer `ad` bukan folder 
 + `closedir(dir);` Menutup direktori `dir`
+
+**Kendala:** -
+
+![](Soal3/1.png)
+![](Soal3/2.png)
+![](Soal3/3.png)
+![](Soal3/4.png)
+![](Soal3/5.png)
