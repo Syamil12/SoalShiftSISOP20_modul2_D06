@@ -94,6 +94,7 @@ echo $sc >> /home/rafi/historyy.log
 ```
 maksud dari isi file.sh ini adalah file ini akan membentuk file bertipe log dengan nama "historyy.log", si dari log tersebut adalah print berhasil dan tanggal jika daemon di jalankan sesuai dengan jam yang ada.
 
+![](Soal1/1.png)
 ### 2. Soal 2
 Belum menyelesaikan Soal 2
 
